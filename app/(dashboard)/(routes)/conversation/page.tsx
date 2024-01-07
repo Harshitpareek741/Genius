@@ -50,13 +50,13 @@ const Conversation = () => {
     </form>
 
     <div className="flex flex-col gap-y-4">
-  {messages.reverse().map((message, index) => (
-    <div key={index} className="bg-gray-200 p-3 rounded-md">
-      <p className="text-sm">
-        <span className="font-semibold">{index % 2 === 0 ? 'User' : 'Answer'}:</span> {message.content}
-      </p>
-    </div>
-  ))}
+    {messages.map((message, index) => (
+  <div key={index} className="bg-gray-200 p-3 rounded-md">
+    <p className="text-sm">
+      <span className="font-semibold">{index % 2 === 0 ? 'User' : 'Answer'}:</span> {message.content}
+    </p>
+  </div>
+))}
 </div>
 
   </div>
