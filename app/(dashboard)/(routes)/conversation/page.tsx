@@ -25,7 +25,7 @@ const Conversation = () => {
       <Heading
       title="Conversation"
       description="Most Advanced Ai conversation model"
-      icon={MessageSquare}
+      icon="Code"
       iconColor="text-violet-500"
       bgColor="bg-violet-500/10"/>
 
