@@ -2,11 +2,10 @@ import { Icon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-//this heading.ts can be use at every page conversation image or video because it's using props
 interface HeadingProps {
   title: string;
   description: string;
-  icon: Icon;
+  icon: any;
   iconColor?: string;
   bgColor?: string;
 }
@@ -14,7 +13,7 @@ interface HeadingProps {
 export const Heading = ({
   title,
   description,
-  icon: Icon,
+  icon: any,
   iconColor,
   bgColor,
 }: HeadingProps) => {
@@ -25,8 +24,7 @@ export const Heading = ({
           <Icon className={cn("w-10 h-10", iconColor)} />
         </div>
         <div>
-          <h2 className="text-3xl font-bold">
-            {title}</h2>
+          <h2 className="text-3xl font-bold">{title}</h2>
           <p className="text-sm text-muted-foreground">
             {description}
           </p>
