@@ -28,7 +28,7 @@ export async function POST(req: Request) {
   
     const responce = await openai.chat.completions.create({
       model: "gpt-3.5-turbo-1106",
-      messages: [{role: "system", content:"You are a conversation generator "  +  messages[messages.length-1].content}],
+      messages: [{role: "system", content:"You are a conversation generator "  +  messages.content}],
     });
     
 return NextResponse.json(responce.choices[0].message.content)
